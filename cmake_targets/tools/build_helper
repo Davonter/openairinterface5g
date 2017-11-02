@@ -640,7 +640,8 @@ check_install_oai_software() {
 
     install_asn1c_from_source
     $SUDO rm -fr /opt/ssh
-    $SUDO git clone https://gist.github.com/2190472.git /opt/ssh
+    #$SUDO git clone https://gist.github.com/2190472.git /opt/ssh
+	$SUDO git clone https://github.com/xrh003/ssh.git /opt/ssh
 }
 
 install_asn1c_from_source(){
