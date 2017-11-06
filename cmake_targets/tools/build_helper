@@ -170,7 +170,8 @@ install_protobuf_from_source(){
     cd /tmp
     echo "Downloading protobuf"
     rm -rf /tmp/protobuf-2.6.1.tar.gz* /tmp/protobuf-2.6.1
-    wget https://github.com/google/protobuf/releases/download/v2.6.1/protobuf-2.6.1.tar.gz
+    #wget https://github.com/google/protobuf/releases/download/v2.6.1/protobuf-2.6.1.tar.gz
+	wget https://download.videolan.org/pub/contrib/protobuf/protobuf-2.6.1.tar.gz
     tar -xzvf protobuf-2.6.1.tar.gz
     cd protobuf-2.6.1/
     ./configure
@@ -190,6 +191,7 @@ install_protobuf_c_from_source(){
     rm -rf /tmp/protobuf-c
     git clone https://github.com/protobuf-c/protobuf-c.git
     cd protobuf-c
+	git checkout 2a46af42784abf86804d536f6e0122d47cfeea45
     ./autogen.sh
     ./configure
     echo "Compiling protobuf-c"
@@ -375,7 +377,8 @@ check_install_oai_software() {
     
     install_asn1c_from_source
     $SUDO rm -fr /opt/ssh
-    $SUDO git clone https://gist.github.com/2190472.git /opt/ssh
+    #$SUDO git clone https://gist.github.com/2190472.git /opt/ssh
+	$SUDO git clone https://github.com/xrh003/ssh.git /opt/ssh
     install_protobuf_from_source
     install_protobuf_c_from_source
 }
@@ -435,8 +438,9 @@ install_asn1c_from_source(){
     echo_info "\nInstalling ASN1. The log file for ASN1 installation is here: $asn1_install_log "
     (
     $SUDO rm -rf /tmp/asn1c
-    GIT_SSL_NO_VERIFY=true git clone https://gitlab.eurecom.fr/oai/asn1c.git /tmp/asn1c
-    cd /tmp/asn1c
+    #GIT_SSL_NO_VERIFY=true git clone https://gitlab.eurecom.fr/oai/asn1c.git /tmp/asn1c
+    GIT_SSL_NO_VERIFY=true git clone git@192.168.168.195:/home/myRepo/asn1c.git /tmp/asn1c
+	cd /tmp/asn1c
     ./configure
     make -j`nproc`
     $SUDO make install
