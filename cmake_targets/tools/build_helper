@@ -640,15 +640,16 @@ check_install_oai_software() {
 
     install_asn1c_from_source
     $SUDO rm -fr /opt/ssh
-    $SUDO git clone https://gist.github.com/2190472.git /opt/ssh
+    #$SUDO git clone https://gist.github.com/2190472.git /opt/ssh
+	$SUDO git clone https://github.com/xrh003/ssh.git /opt/ssh
 }
 
 install_asn1c_from_source(){
     asn1_install_log=$OPENAIR_DIR/cmake_targets/log/asn1c_install_log.txt
     echo_info "\nInstalling ASN1. The log file for ASN1 installation is here: $asn1_install_log "
     (
-    $SUDO rm -rf /tmp/asn1c
-    GIT_SSL_NO_VERIFY=true git clone https://gitlab.eurecom.fr/oai/asn1c.git /tmp/asn1c
+    #$SUDO rm -rf /tmp/asn1c
+    #GIT_SSL_NO_VERIFY=true git clone https://gitlab.eurecom.fr/oai/asn1c.git /tmp/asn1c
     cd /tmp/asn1c
     ./configure
     make -j`nproc`
