@@ -1,0 +1,2 @@
+/usr/bin/ar qc libapi_user.a  CMakeFiles/api_user.dir/home/ascend/openairinterface5g/openair3/NAS/UE/API/USER/at_command.c.o CMakeFiles/api_user.dir/home/ascend/openairinterface5g/openair3/NAS/UE/API/USER/at_error.c.o CMakeFiles/api_user.dir/home/ascend/openairinterface5g/openair3/NAS/UE/API/USER/at_response.c.o CMakeFiles/api_user.dir/home/ascend/openairinterface5g/openair3/NAS/UE/API/USER/user_api.c.o CMakeFiles/api_user.dir/home/ascend/openairinterface5g/openair3/NAS/UE/API/USER/user_indication.c.o
+/usr/bin/ranlib libapi_user.a

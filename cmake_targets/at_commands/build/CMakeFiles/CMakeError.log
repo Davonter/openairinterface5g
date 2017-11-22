@@ -1,0 +1,58 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/ascend/openairinterface5g/cmake_targets/at_commands/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8bfe8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8bfe8.dir/build.make CMakeFiles/cmTC_8bfe8.dir/build
+make[1]: Entering directory '/home/ascend/openairinterface5g/cmake_targets/at_commands/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8bfe8.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -msse4.2 -std=gnu99 -Wall -Wstrict-prototypes -fno-strict-aliasing -rdynamic -funroll-loops -Wno-packed-bitfield-compat -DCMAKER    -o CMakeFiles/cmTC_8bfe8.dir/CheckSymbolExists.c.o   -c /home/ascend/openairinterface5g/cmake_targets/at_commands/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_8bfe8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8bfe8.dir/link.txt --verbose=1
+/usr/bin/cc   -msse4.2 -std=gnu99 -Wall -Wstrict-prototypes -fno-strict-aliasing -rdynamic -funroll-loops -Wno-packed-bitfield-compat -DCMAKER     CMakeFiles/cmTC_8bfe8.dir/CheckSymbolExists.c.o  -o cmTC_8bfe8 -rdynamic 
+CMakeFiles/cmTC_8bfe8.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_8bfe8.dir/build.make:97: recipe for target 'cmTC_8bfe8' failed
+make[1]: *** [cmTC_8bfe8] Error 1
+make[1]: Leaving directory '/home/ascend/openairinterface5g/cmake_targets/at_commands/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_8bfe8/fast' failed
+make: *** [cmTC_8bfe8/fast] Error 2
+
+File /home/ascend/openairinterface5g/cmake_targets/at_commands/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ascend/openairinterface5g/cmake_targets/at_commands/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bf7c6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bf7c6.dir/build.make CMakeFiles/cmTC_bf7c6.dir/build
+make[1]: Entering directory '/home/ascend/openairinterface5g/cmake_targets/at_commands/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bf7c6.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -msse4.2 -std=gnu99 -Wall -Wstrict-prototypes -fno-strict-aliasing -rdynamic -funroll-loops -Wno-packed-bitfield-compat -DCMAKER -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_bf7c6.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+ char CHECK_FUNCTION_EXISTS();
+ ^
+Linking C executable cmTC_bf7c6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bf7c6.dir/link.txt --verbose=1
+/usr/bin/cc   -msse4.2 -std=gnu99 -Wall -Wstrict-prototypes -fno-strict-aliasing -rdynamic -funroll-loops -Wno-packed-bitfield-compat -DCMAKER -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_bf7c6.dir/CheckFunctionExists.c.o  -o cmTC_bf7c6 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_bf7c6.dir/build.make:97: recipe for target 'cmTC_bf7c6' failed
+make[1]: *** [cmTC_bf7c6] Error 1
+make[1]: Leaving directory '/home/ascend/openairinterface5g/cmake_targets/at_commands/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_bf7c6/fast' failed
+make: *** [cmTC_bf7c6/fast] Error 2
+
+

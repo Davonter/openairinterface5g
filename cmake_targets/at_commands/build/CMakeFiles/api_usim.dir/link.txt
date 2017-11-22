@@ -1,0 +1,2 @@
+/usr/bin/ar qc libapi_usim.a  CMakeFiles/api_usim.dir/home/ascend/openairinterface5g/openair3/NAS/UE/API/USIM/aka_functions.c.o CMakeFiles/api_usim.dir/home/ascend/openairinterface5g/openair3/NAS/UE/API/USIM/usim_api.c.o
+/usr/bin/ranlib libapi_usim.a

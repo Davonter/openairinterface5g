@@ -1,0 +1,2 @@
+/usr/bin/ar qc libapi_network.a  CMakeFiles/api_network.dir/home/ascend/openairinterface5g/openair3/NAS/COMMON/API/NETWORK/as_message.c.o CMakeFiles/api_network.dir/home/ascend/openairinterface5g/openair3/NAS/COMMON/API/NETWORK/nas_message.c.o CMakeFiles/api_network.dir/home/ascend/openairinterface5g/openair3/NAS/COMMON/API/NETWORK/network_api.c.o
+/usr/bin/ranlib libapi_network.a

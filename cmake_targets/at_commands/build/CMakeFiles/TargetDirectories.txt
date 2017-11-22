@@ -1,0 +1,11 @@
+/home/ascend/openairinterface5g/cmake_targets/at_commands/build/CMakeFiles/edit_cache.dir
+/home/ascend/openairinterface5g/cmake_targets/at_commands/build/CMakeFiles/api_usim.dir
+/home/ascend/openairinterface5g/cmake_targets/at_commands/build/CMakeFiles/api_network.dir
+/home/ascend/openairinterface5g/cmake_targets/at_commands/build/CMakeFiles/esm.dir
+/home/ascend/openairinterface5g/cmake_targets/at_commands/build/CMakeFiles/secu_cn.dir
+/home/ascend/openairinterface5g/cmake_targets/at_commands/build/CMakeFiles/ies.dir
+/home/ascend/openairinterface5g/cmake_targets/at_commands/build/CMakeFiles/util.dir
+/home/ascend/openairinterface5g/cmake_targets/at_commands/build/CMakeFiles/emm.dir
+/home/ascend/openairinterface5g/cmake_targets/at_commands/build/CMakeFiles/api_user.dir
+/home/ascend/openairinterface5g/cmake_targets/at_commands/build/CMakeFiles/at_nas_ue.dir
+/home/ascend/openairinterface5g/cmake_targets/at_commands/build/CMakeFiles/rebuild_cache.dir
