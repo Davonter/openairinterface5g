@@ -1638,9 +1638,10 @@ static void* eNB_thread_single( void* param ) {
 
 
   // if this is a slave eNB, try to synchronize on the DL frequency
-  if ((eNB->is_slave) &&
-      ((eNB->node_function >= NGFI_RRU_IF5))) {
-    // if FDD, switch RX on DL frequency
+  //if ((eNB->is_slave) &&
+  //    ((eNB->node_function >= NGFI_RRU_IF5))) {
+	if(1){
+	// if FDD, switch RX on DL frequency
     
     double temp_freq1 = eNB->rfdevice.openair0_cfg->rx_freq[0];
     double temp_freq2 = eNB->rfdevice.openair0_cfg->tx_freq[0];
