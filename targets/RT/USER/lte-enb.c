@@ -1401,8 +1401,15 @@ void *eNB_thread_synch(void *arg) {
 	  else
 	    eNB->rx_offset = (fp->samples_per_tti*10) + sync_pos2 - sync_pos_slot;
 	}
-	else {
-	  
+	else {		// TDD mode
+		// 对于TDD模式来说，PSS周期性的出现在子帧1和子帧6的第三个OFDM符号上，即DwPTS符号上   (此处仅对于Normal CP 而言)
+		int sync_pos_slot = fp->samples_per_tti + 2 * fp->ofdm_symbol_size + fp->nb_prefix_samples0 + 1.2 * fp->nb_prefix_samples;
+		
+		if(sync_pos2 >= sync_pos_slot)
+			eNB->rx_offset = sync_pos2 - sync_pos_slot;
+		else
+			eNB->rx_offset = (fp->samples_per_tti * 10) + sync_pos2 - sync_pos_slot;
+		
 	}
 
 	LOG_I(PHY,"Estimated sync_pos %d, peak_val %d => timing offset %d\n",sync_pos,peak_val,eNB->rx_offset);
@@ -1435,7 +1442,7 @@ int wakeup_synch(PHY_VARS_eNB *eNB){
   struct timespec wait;
   
   wait.tv_sec=0;
-  wait.tv_nsec=5000000L;
+  wait.tv_nsec=5000000L;	//5ms数据帧  （即特殊子帧5ms出现一次）
 
   // wake up synch thread
   // lock the synch mutex and make sure the thread is ready
